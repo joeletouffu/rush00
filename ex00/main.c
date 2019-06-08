@@ -6,7 +6,7 @@
 /*   By: ggilbert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/08 07:50:41 by ggilbert          #+#    #+#             */
-/*   Updated: 2019/06/08 08:26:40 by ggilbert         ###   ########.fr       */
+/*   Updated: 2019/06/08 08:47:08 by ggilbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,17 +37,20 @@ void	rush(int x, int y)
 				if (count_x == 0 || count_x == base_x)
 				{
 					ft_putchar('o');
+					if (count_x == base_x)
+						ft_putchar('\n');
 					count_x++;
 					x--;
-					break ;
+					continue ;
 				}
 				else
 				{
 					ft_putchar('-');
 					count_x++;
 					x--;
-					break ;
+					continue ;
 				}
+				x = base_x;
 				count_x = 0;
 			}
 		}
